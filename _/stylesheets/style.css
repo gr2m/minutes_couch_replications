@@ -1,0 +1,355 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    
+    min-height: 740px;
+
+    background-image: linear-gradient(bottom, rgb(189,189,189) 10%, rgb(240,240,240) 55%, rgb(190,190,190) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(189,189,189) 10%, rgb(240,240,240) 55%, rgb(190,190,190) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(189,189,189) 10%, rgb(240,240,240) 55%, rgb(190,190,190) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(189,189,189) 10%, rgb(240,240,240) 55%, rgb(190,190,190) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(189,189,189) 10%, rgb(240,240,240) 55%, rgb(190,190,190) 78%);
+
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	left top,
+    	color-stop(0.1, rgb(189,189,189)),
+    	color-stop(0.55, rgb(240,240,240)),
+    	color-stop(0.78, rgb(190,190,190))
+    );
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+b, strong { font-weight: bold }
+i, em { font-style: italic}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+/* enable clicking on elements 'hiding' behind body in 3D */
+body     { pointer-events: none; }
+#impress { pointer-events: auto; }
+
+/* COMMON STEP STYLES */
+
+.step {
+    width: 900px;
+    padding: 40px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+/* fade out inactive slides */
+
+.step {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.step:not(.active) {
+    opacity: 0.3;
+}
+
+/* STEP SPECIFIC STYLES */
+
+/* hint on the first slide */
+
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 50px;
+    padding: 20px;
+    
+    z-index: 100;
+    
+    opacity: 0;
+    
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+/* IMPRESS NOT SUPPORTED STYLES */
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    
+    display: none;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    border: 1px solid #E4C652;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-not-supported .step {
+    position: relative;
+    opacity: 1;
+    margin: 20px auto;
+}
+
+.impress-not-supported .fallback-message {
+    display: block;
+}
+
+
+
+#sheet {
+  width:            1000px;
+  height:           4000px;
+  
+  background:       url(../images/minutes-meeting-graphic.png) 50% 1500px no-repeat;
+}
+
+h1 {
+  font-size:        2em;
+  
+  overflow:         hidden;
+}
+h2 {
+  font-weight:      bold;
+}
+
+small {
+  display:          block;
+  padding-top:      4em;
+  font-size:        .6em;
+  line-height:      1.4em !important;
+}
+
+ul, ol {
+  margin:           1em 0;
+  margin-left:      0;
+  list-style:       disc;
+}
+ol {
+  list-style:       decimal;
+}
+
+#summary {
+  font-size:        2.4em;
+}
+#summary em {
+  font-style:       normal;
+  background-color: RGBa(255,255,255,.5);
+  padding:          .1em .2em;
+  margin:           .1em -.2em;
+  
+  
+          border-radius: 10px 10px 10px 10px ;
+     -moz-border-radius: 10px 10px 10px 10px ;
+  -webkit-border-radius: 10px 10px 10px 10px ;
+}
+
+#me {
+  height:           700px;
+  position:         relative;  
+}
+#me del,
+#me ins {
+  text-decoration:  none;
+  position:         absolute;
+  top:              300px;
+  width:            500px;
+  left:             50%;
+  margin-left:      -250px;
+  
+       -o-transition: all .3s linear;
+     -moz-transition: all .3s linear; 
+  -webkit-transition: all .3s linear;
+  
+  -webkit-transition-delay: 1.75s;
+  -moz-transition-delay:    1.75s;
+  -ms-transition-delay:     1.75s;
+  -o-transition-delay:      1.75s;
+  transition-delay:         1.75s;
+}
+
+
+#me ins {
+  opacity:          0;
+}
+#me.active del {
+  opacity:          .3;
+  text-decoration:  line-through;
+}
+#me.active ins,
+#me del {
+  opacity:          1;
+}
+
+#me.active del {
+  margin:           -50px 0 0 -500px;
+  
+  -webkit-transform: rotate(-10deg);
+  -moz-transform:    rotate(-10deg);
+  -ms-transform:     rotate(-10deg);
+  -o-transform:      rotate(-10deg);
+  transform:         rotate(-10deg);
+}
+
+#me.active del + del {
+  margin:           -30px 0 0 0;
+  
+  -webkit-transform: rotate(27deg);
+  -moz-transform:    rotate(27deg);
+  -ms-transform:     rotate(27deg);
+  -o-transform:      rotate(27deg);
+  transform:         rotate(27deg);
+}
+#me.active del + del + del {
+  margin:           130px 0 0 -200px;
+  
+  -webkit-transform: rotate(-7deg);
+  -moz-transform:    rotate(-7deg);
+  -ms-transform:     rotate(-7deg);
+  -o-transform:      rotate(-7deg);
+  transform:         rotate(-7deg);
+}
+#me.active ins {
+  margin:            30px 0 0 -250px;
+  
+  -webkit-transform: rotate(2deg);
+  -moz-transform:    rotate(2deg);
+  -ms-transform:     rotate(2deg);
+  -o-transform:      rotate(2deg);
+  transform:         rotate(2deg); 
+}
+
+#reason5_really {
+  text-align:       center;
+}
+
+#troubles_detail {
+  padding:          214px 0 0 500px;
+}
+
+#questions_summary {
+  font-size:        1.8em;
+  
+  height:           1000px;
+  width:            1800px;
+}
+
+#questions_summary div {
+  float:            left;
+  width:            50%;
+  padding:          100px 10% 0 0;
+}
+#questions_summary div:nth-child(odd) {
+  float:            left;
+  width:            30%;
+  padding-left:     0;
+}
+#questions {
+  height:           1000px;
+  line-height:      1000px;
+
+  width:            1800px;
+  text-align:       center;
+}

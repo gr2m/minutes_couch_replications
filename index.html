@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>minutes.io — A Production CouchApp and a Shitload of Replications</title>
+    
+    <meta name="description" content="@gr2m will talk us through minutes.io, the meeting notes taking app that doesn't have a signup page. It's a fully featured CouchApp and uses CouchDB replication as a sharing model for users and groups. He loves CouchDB and shows you what he built with it and where you might have to watch out for trouble :)">
+    <meta name="author" content="Gregor Martynus" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="_/stylesheets/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+  
+    <!--
+      
+        possible attributes
+      
+        * `data-x`, `data-y`, `data-z` -- they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` -- they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` -- defines the scale of step element; default value is 1
+      
+    -->
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+
+    
+    <div id="intro" class="step" data-x="-3000" data-y="-4500">
+        <h1>
+          minutes.io
+        </h1>
+        <p>
+          A Production CouchApp<br />
+          and a Shitload of Replications
+        </p>
+        
+        <p>
+          <small>
+            Gregor Martynus<br />
+            <a href="http://twitter.com/gr2m">@gr2m</a> <a href="http://twitter.com/minutes_io">@minutes_io</a>
+          </small>
+        </p>
+    </div>
+    
+    <div id="me" class="step" data-x="-3000" data-y="-3500">
+        <h1>
+           Gregor Martynus
+        </h1>
+        <p>
+          <del>Developer</del> <del>Designer</del> <del>Business Buzzer</del>
+          <ins>somethin' in between</ins>
+        </p>
+    </div>
+    
+    <div id="love" class="step" data-x="-3000" data-y="-2500">
+        <p>
+          &hearts; building products
+        </p>
+    </div>
+    <div id="love2" class="step" data-x="-3000" data-y="-2400">
+        <p>
+          &hearts; solving real life issues
+        </p>
+    </div>
+    <div id="love3" class="step" data-x="-3000" data-y="-2300">
+        <p>
+          &hearts; tools that help me do that
+        </p>
+    </div>
+    
+    <div id="summary" class="step" data-x="-2500" data-y="-1300" data-rotate="-45" >
+        <p>
+          minutes.io?<br />          
+          <strong><em>simplest meeting tool since pen &amp; paper.</em></strong>
+        </p>
+        <ol>
+          <li>immediate saving, automated synchronization</li>
+          <li>works on &amp; offline</li>
+          <li>It just works&trade;</li>
+        </ol>
+    </div>
+    
+    <div id="sheet" class="step" data-x="-1000" data-y="-500" data-rotate="-90">
+        <!-- bg image ... -->
+    </div>
+
+
+    
+    <div id="engin-room-start" class="step engin-room" data-x="350" data-y="2000" data-rotate="90" data-scale="3">
+        <h1>engine room</h1>
+        
+        <p>
+          started with
+        </p>
+        
+        <ul>
+          <li>backbone.js</li>
+          <li>Rails</li>
+          <li>Postgres</li>
+        </ul>
+    </div>
+    
+    <div id="engin-room-end" class="step engin-room" data-x="-950" data-y="2000" data-rotate="90" data-scale="3">
+        <p>
+          migrated to
+        </p>
+        
+        <ul>
+          <li>backbone.js</li>
+          <li>couchDB</li>
+          <li>nodeJS</li>
+        </ul>
+    </div>
+    
+    <div id="coffeescript" class="step" data-x="1000" data-y="3500" data-rotate="0" data-scale="9">
+        <p>
+          and &hearts;CoffeeScript&hearts;
+        </p>
+    </div>
+    
+    <div id="why" class="step" data-x="5000" data-y="3500" data-rotate="180" data-scale="3" data-z="-10000">
+        <h1>Why?</h1>
+    </div>
+    
+    <div id="reason" class="step" data-x="5000" data-y="3000" data-rotate="180" data-scale="3" data-z="-10000">
+        <p>
+          Introduction of Accounts<br />
+          Login with email & password
+        </p>
+    </div>
+    
+    <div id="reason2" class="step" data-x="5000" data-y="2500" data-rotate="180" data-scale="3" data-z="-10000">
+        <p>
+          Accessing data across devices<br />
+          => <strong>Synchronization</strong>.
+        </p>
+    </div>
+    
+    <div id="reason3" class="step" data-x="5000" data-y="2000" data-rotate="180" data-scale="3" data-z="-10000">
+        <p>
+          The it just works&trade;- kind of<br />
+          <strong>live Synchronization</strong>
+        </p>
+    </div>
+    
+    <div id="reason4" class="step" data-x="5000" data-y="1000" data-rotate="180" data-scale="3" data-z="-10000">
+        <p>
+          <strong>Rails/Postgres</strong><br />
+          can do it.
+        </p>
+    </div>
+    <div id="reason5" class="step" data-x="3500" data-y="-300" data-rotate="180" data-scale="2" data-z="-5000">
+        <p>
+          <strong>CouchDB</strong><br />
+          is made for it.
+        </p>
+    </div>
+    
+    <div id="reason5_really" class="step" data-x="3000" data-y="-1000" data-rotate="180" data-scale="3">
+        <p>
+          right?
+        </p>
+    </div>
+    
+    <div id="troubles" class="step" data-x="2500" data-y="-2000" data-rotate="135">
+        <h1>
+          (teething) troubles
+        </h1>
+        
+        <ol>
+          <li>Replications</li>
+          <li>Replications</li>
+          <li>Replications</li>
+          <li>Replications</li>
+        </ol>
+    </div>
+    
+    <div id="troubles_detail" class="step" data-x="2500" data-y="-2000" data-rotate="135">
+        
+        <ol>
+          <li>OS open files</li>
+          <li>open databases</li>
+          <li>ETS tables</li>
+          <li>Erlang process limit</li>
+        </ol>
+    </div>
+    
+    <div id="no_more_trouble" class="step" data-x="1500" data-y="-3000" data-rotate="135">
+        
+        <h1>
+          But
+        </h1>
+        
+        <p>
+          no Couch/Replication problems<br />
+          since 1 month:<br />
+          <br />
+          <strong>minutes.io ♥ Iris Couch</strong>
+        </p>
+    </div>
+    <div id="questions_summary" class="step" data-x="500" data-y="-4000" data-rotate="135"  data-z="-300">
+        
+        <h1>minutes.io is a couchApp with a nodeJS proxy</h1>
+        
+        <div>
+          <h2>
+            FRONTEND: HTML5
+          </h2>
+          
+          <ul>
+            <li>local data, no internet connection needed.</li>
+            <li>Background Synchronization (decoupled, _changes & _bulk_docs)</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h2>
+            PROXY: node.js
+          </h2>
+          
+          <ul>
+            <li>User sessions</li>
+            <li>Caching static assets</li>
+            <li>creating databases & replications</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h2>
+            BACKEND: couchDB
+          </h2>
+          
+          <ul>
+            <li>database per user</li>
+            <li>continuous replications userDB => masterDB</li>
+            <li>database per shared meeting</li>
+            <li>continuous replications userDB <=> meetingDB <=> userDB</li>
+            <li>business logic / validations</li>
+            <li>static assets</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h2>
+            NUMBERS
+          </h2>
+          
+          <ul>
+            <li>1898 user databases</li>
+            <li>1470 meeting databases</li>
+            <li>5102 replications</li>
+          </ul>
+        </div>
+    </div>
+    
+    <div id="questions" class="step" data-x="150" data-y="-4000" data-rotate="135">
+      <h1>Questions?</h1>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+
+
+  <script src="_/javascripts/impress.js"></script>
+
+</body>
+</html>
